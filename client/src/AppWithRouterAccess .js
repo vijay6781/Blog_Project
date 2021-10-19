@@ -31,12 +31,8 @@ const AppWithRouterAccess = () => {
     
     return (
         
-        <Security
-        oktaAuth={oktaAuth}
-        onAuthRequired={customAuthHandler}
-        restoreOriginalUri={restoreOriginalUri}
-    >
-        <SecureRoute path='/' component={Header} />
+       
+        
         <Box style={{ marginTop: 64 }}>
             <Switch>
                 <Route exact path='/' component={Home} />
@@ -52,7 +48,7 @@ const AppWithRouterAccess = () => {
                 <Route exact path='/contact' component={Contact} />
             </Switch>
         </Box>
-    </Security >
+   
     )
 }
 

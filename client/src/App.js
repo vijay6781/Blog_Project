@@ -15,8 +15,7 @@ function App() {
   return (
     <ContextProvider>
       <BrowserRouter>
-        <AppWithRouterAccess/>
-        {/* <Header />
+        <Header />
         <Box style={{marginTop: 64}}>
           <Switch>
             <Route exact path='/' component={Home} />
@@ -24,7 +23,7 @@ function App() {
             <Route exact path='/create' component={CreatePost} />
             <Route exact path='/update/:id' component={Update} />
           </Switch>
-        </Box> */}
+        </Box>
       </BrowserRouter>
     </ContextProvider>
   );

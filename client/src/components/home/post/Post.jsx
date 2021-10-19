@@ -41,7 +41,7 @@ const Post = ({ post }) => {
     const addEllipsis = (str, limit) => {
         return str.length > limit ? str.substring(0, limit) + '...' : str;
     } 
-
+    
     return (
         <Box className={classes.container}>
             <img src={url} alt="post" className={classes.image} />

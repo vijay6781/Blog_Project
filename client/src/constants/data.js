@@ -1,7 +1,7 @@
 export const categories = [
-    "Music",
-    "Movies",
-    "Sports",
+    "DSA",
+    "IOT",
+    "AI",
     "Tech",
     "Fashion"
 ];
