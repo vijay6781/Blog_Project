@@ -5,7 +5,7 @@ import { useState } from 'react';
 import {useHistory} from 'react-router-dom';
 import {createPost} from '../../service/api';
 
-const useStyle = makeStyles(theme => ({
+const useStyle = makeStyles(theme => ({ 
     container: {
         padding:'10px 100px',
         margin:'auto',
