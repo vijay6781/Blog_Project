@@ -78,8 +78,8 @@ const DetailView = ({ match }) => {
             <img src={post.picture || url} alt="post" className={classes.image} />
             <Box className={classes.icons}>
                 {   
-                    account === post.username && 
-                    <>  
+                    
+                     <>
                         <Link to={`/update/${post._id}`}><Edit className={classes.icon} color="primary"/></Link>
                         <Link><Delete onClick={() => deleteBlog()} className={classes.icon} color="error" /></Link>
                     </>
