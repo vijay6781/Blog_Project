@@ -55,15 +55,9 @@ const Update = ({ match }) => {
     const [file, setFile] = useState('');
     const [imageURL, setImageURL] = useState('');
 
-    const url = 'https://images.unsplash.com/photo-1543128639-4cb7e6eeef1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwc2V0dXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80';
+    const url = post.picture ? post.picture : 'https://images.unsplash.com/photo-1543128639-4cb7e6eeef1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwc2V0dXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80';
     
-    useEffect(() => {
-        const fetchData = async () => {
-            let data = await getPost(match.params.id);
-            setPost(data);
-        }
-        fetchData();
-    }, []);
+    
 
     useEffect(() => {
         const getImage = async () => { 
@@ -79,6 +73,14 @@ const Update = ({ match }) => {
         }
         getImage();
     }, [file])
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            let data = await getPost(match.params.id);
+            setPost(data);
+        }
+        fetchData();
+    }, []);
 
     const updateBlogPost = async () => {
         await updatePost(match.params.id, post);

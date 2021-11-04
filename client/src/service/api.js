@@ -40,7 +40,6 @@ export const getPost = async (id) => {
 export const updatePost = async (id, post) => {
     try {
         return await axios.put(`${url}/update/${id}`, post);
-        
     } catch(error) {
         console.log('Error while calling updatePost API ', error)
     }
